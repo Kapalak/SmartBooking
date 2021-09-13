@@ -9,7 +9,7 @@
     "video": true,
     "pluginsFile": "cypress/plugins/index.js",
     "supportFile": "cypress/support/index.js",
-    "projectId": "mio5jy",
+    "projectId": "joz919",
     "env": {
         "ASKIA_URL": "https://askia.com/"
     }

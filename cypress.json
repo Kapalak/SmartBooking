@@ -1,0 +1,16 @@
+{
+    "integrationFolder": "cypress/integration/",
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "tests/test-output-[hash].xml",
+      "toConsole": true,
+      "attachments": true
+    },
+    "video": true,
+    "pluginsFile": "cypress/plugins/index.js",
+    "supportFile": "cypress/support/index.js",
+    "projectId": "mio5jy",
+    "env": {
+        "ASKIA_URL": "https://askia.com/"
+    }
+}

@@ -31,7 +31,7 @@ jobs:
       
       - name: Run Cypress Test
         run: |
-          npx cypress run --spec cypress/integration/1-Askia/*.spec.js
+          npx cypress run --spec cypress/integration/1-Askia/*.spec.js --record --key dee9ed2a-0d7b-425b-87e1-fd17a44165b3
         continue-on-error: true          
       
       - name: Upload video test result

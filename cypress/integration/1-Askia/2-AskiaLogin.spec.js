@@ -27,15 +27,24 @@ describe('002 Askia web tests', () => {
 
     cy.screenshot();
 
-    // cy.get('span.menu-text').invoke('text')
-    //   .should('have.value', Cypress.env('DEVPORTAL_NAME'));
-
-    // $('span.menu-text').innerText
-
-    // cy.get('#menu-current-user > span.menu-text')
-    //   .should('have.innerText', Cypress.env('DEVPORTAL_NAME'));
-
     cy.get('#menu-current-user > span.menu-text')
       .should("have.text", Cypress.env('DEVPORTAL_NAME'));
+
+    cy.wait(5000);
+
+    cy.screenshot();
+
+    cy.get('#module-frame').then($iframe => {
+
+      const iframe = $iframe.contents();
+
+      const myInput = iframe.find('body > div > section.modules > div > div.module-card.surveyscreation > a > img');
+
+      cy.wrap(myInput).click();
+    });
+
+    cy.url().should('include', '/design/');
+
+    cy.screenshot();
   })
 })

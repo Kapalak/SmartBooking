@@ -32,7 +32,7 @@ jobs:
       - name: Run Cypress Test
         run: |
           npx cypress run --spec cypress/integration/1-Askia/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}
-        continue-on-error: true          
+        continue-on-error: true        
       
       - name: Upload video test result
         uses: actions/upload-artifact@v1.0.0
@@ -40,7 +40,15 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/videos/1-Askia/            
+          path: cypress/videos/1-Askia/       
+              
+      - name: Upload screenshots test result
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          # Artifact name
+          name: test-result-video
+          # Directory containing files to upload
+          path: cypress/\screenshots/1-Askia/  
       
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1

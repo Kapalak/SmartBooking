@@ -40,7 +40,7 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/videos/1-Askia/*.mp4              
+          path: cypress/videos/1-Askia/            
       
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1

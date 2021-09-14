@@ -11,6 +11,10 @@
     "supportFile": "cypress/support/index.js",
     "projectId": "joz919",
     "env": {
-        "ASKIA_URL": "https://askia.com/"
+        "ASKIA_URL": "https://askia.com/",
+        "DEVPORTAL_URL": "https://devportal.askia.com/AskiaPortal/",
+        "DEVPORTAL_USERNAME": "aymen@askia.com",
+        "DEVPORTAL_PASSWORD": "P@ssw0rd",
+        "DEVPORTAL_NAME": "aymen"
     }
 }

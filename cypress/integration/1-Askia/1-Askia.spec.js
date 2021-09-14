@@ -2,7 +2,7 @@
 
 describe('001 Askia web tests', () => {
 
-  it('Login as a user and navigate on the menu', () => {
+  it('Test demo page', () => {
     cy.visit(Cypress.env('ASKIA_URL'))
 
     cy.xpath('//a[@title="Askia - Automating insight"]')

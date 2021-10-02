@@ -10,7 +10,7 @@
     "video": true,
     "pluginsFile": "cypress/plugins/index.js",
     "supportFile": "cypress/support/index.js",
-    "projectId": "joz919",
+    "projectId": "ut965h",
     "env": {
         "BOOKING_URL": "https://www.isere.gouv.fr/booking/create/14544/1",
         "BOOKING_PAGE1_TITLE": "demande de rendez-vous en préfecture pour un renouvellement ",

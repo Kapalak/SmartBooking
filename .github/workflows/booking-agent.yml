@@ -88,6 +88,6 @@ jobs:
           ignore_cert: true
           convert_markdown: true
           # Optional attachments:
-          attachments: cypress/videos/booking_agent/booking.spec.js.mp4
+          attachments: cypress/videos/booking_agent/booking.spec.js.mp4, cypress/screenshots/booking_agent/booking.spec.js/*.png
           priority: normal
 

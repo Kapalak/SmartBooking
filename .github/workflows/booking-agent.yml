@@ -93,8 +93,8 @@ jobs:
           attachments: cypress/videos/booking_agent/booking.spec.js.mp4, cypress/screenshots/booking_agent/booking.spec.js/*.png
           priority: normal
           
-      - name: Trigger GitHub pages rebuild
-        if: ${{ failure() }}
+      - name: Send Sms Notification
+        if: always()
         run: |
           curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACcd390961d2822915c128dd88a192597c/Messages.json \
             --data-urlencode "Body=RDV Disponbibles https://www.isere.gouv.fr/booking/create/14544/" \

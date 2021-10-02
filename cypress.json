@@ -6,15 +6,15 @@
       "toConsole": true,
       "attachments": true
     },
+    "chromeWebSecurity": false, 
     "video": true,
     "pluginsFile": "cypress/plugins/index.js",
     "supportFile": "cypress/support/index.js",
     "projectId": "joz919",
     "env": {
-        "ASKIA_URL": "https://askia.com/",
-        "DEVPORTAL_URL": "https://devportal.askia.com/AskiaPortal/",
-        "DEVPORTAL_USERNAME": "aymen@askia.com",
-        "DEVPORTAL_PASSWORD": "P@ssw0rd",
-        "DEVPORTAL_NAME": "aymen"
+        "BOOKING_URL": "https://www.isere.gouv.fr/booking/create/14544/1",
+        "BOOKING_PAGE1_TITLE": "demande de rendez-vous en préfecture pour un renouvellement ",
+        "BOOKING_PAGE2_TITLE": "Vérification de disponibilité",
+        "BOOKING_PAGE2_TEXT": "\n                                        Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.\n                    \n                        \n                    \n                                                        "
     }
 }

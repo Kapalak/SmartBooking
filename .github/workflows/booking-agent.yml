@@ -94,7 +94,7 @@ jobs:
           priority: normal
           
       - name: Send Sms Notification
-        if: always()
+        if: ${{ failure() }}
         run: |
           curl 'https://api.twilio.com/2010-04-01/Accounts/ACfc6f10496bcfbfd6316133068ae16c9e/Messages.json' -X POST \
             --data-urlencode 'To=+33651827566' \

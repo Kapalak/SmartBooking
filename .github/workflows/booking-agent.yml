@@ -84,6 +84,7 @@ jobs:
           body: Build job of ${{github.repository}} completed.
           html_body: file://README.html
           bcc: ${{secrets.EMAIL_BCCS}}
+          to: ${{secrets.EMAIL_USERNAME}}
           reply_to: ${{secrets.EMAIL_USERNAME}}
           ignore_cert: true
           convert_markdown: true

@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ASKIA-WT
+name: BOOKING-JOB
 
 # Controls when the workflow will run
 on:
@@ -31,7 +31,7 @@ jobs:
       
       - name: Run Cypress Test
         run: |
-          npx cypress run --spec cypress/integration/1-Askia/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}
+          npx cypress run --spec cypress/integration/booking-agent/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}
         continue-on-error: true        
       
       - name: Upload video test result
@@ -40,7 +40,7 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/videos/1-Askia/       
+          path: cypress/videos/booking-agent/       
               
       - name: Upload screenshots test result
         uses: actions/upload-artifact@v1.0.0
@@ -48,7 +48,7 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/screenshots/1-Askia/  
+          path: cypress/screenshots/booking-agent/  
       
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1

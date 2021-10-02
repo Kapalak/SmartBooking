@@ -79,14 +79,12 @@ jobs:
           server_port:  ${{ secrets.EMAIL_PORT }}
           username: ${{secrets.EMAIL_USERNAME}}
           password: ${{secrets.EMAIL_PASSWORD}}
-          subject: Github Actions job result
-          to: benmiledaymen@gmail.com
+          subject: RDV PREFECTURE
           from: contact@kapalak.com
           body: Build job of ${{github.repository}} completed.
           html_body: file://README.html
-          cc: benmiledaymen@gmail.com
-          bcc: benmiledaymen@gmail.com
-          reply_to: contact@kapalak.com
+          bcc: ${{secrets.EMAIL_BCCS}}
+          reply_to: ${{secrets.EMAIL_USERNAME}}
           ignore_cert: true
           convert_markdown: true
           # Optional attachments:

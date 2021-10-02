@@ -96,8 +96,8 @@ jobs:
       - name: Send Sms Notification
         if: always()
         run: |
-          curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACcd390961d2822915c128dd88a192597c/Messages.json \
-            --data-urlencode "Body=RDV Disponbibles https://www.isere.gouv.fr/booking/create/14544/" \
-            --data-urlencode "From=+33651827566" \
-            --data-urlencode "To=+33651827566" \
+          curl 'https://api.twilio.com/2010-04-01/Accounts/ACfc6f10496bcfbfd6316133068ae16c9e/Messages.json' -X POST \
+            --data-urlencode 'To=+33651827566' \
+            --data-urlencode 'MessagingServiceSid=MGecdfd10937b856325c651ddf2449455f' \
+            --data-urlencode 'Body=rdv disponibles  https://www.isere.gouv.fr/booking/create/14544/' \
             -u ${{secrets.TWILIO_ACCOUNT_SID}}:${{secrets.TWILIO_AUTH_TOKEN}}

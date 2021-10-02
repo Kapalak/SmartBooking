@@ -82,7 +82,6 @@ jobs:
           subject: Github Actions job result
           to: benmiledaymen@gmail.com
           from: contact@kapalak.com
-          secure: true
           body: Build job of ${{github.repository}} completed.
           html_body: file://README.html
           cc: benmiledaymen@gmail.com

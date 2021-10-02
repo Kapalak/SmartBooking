@@ -69,4 +69,27 @@ jobs:
           mention_users_when: 'failure,warnings'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
-            
+          
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: ${{ secrets.EMAIL_HOST }}
+          server_port:  ${{ secrets.EMAIL_PORT }}
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Github Actions job result
+          to: benmiledaymen@gmail.com
+          from: contact@kapalak.com
+          secure: true
+          body: Build job of ${{github.repository}} completed.
+          html_body: file://README.html
+          cc: benmiledaymen@gmail.com
+          bcc: benmiledaymen@gmail.com
+          reply_to: contact@kapalak.com
+          ignore_cert: true
+          convert_markdown: true
+          # Optional attachments:
+          attachments: cypress/videos/booking_agent/booking.spec.js.mp4
+          priority: normal
+

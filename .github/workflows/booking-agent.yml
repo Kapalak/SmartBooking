@@ -63,6 +63,7 @@ jobs:
         if: always()
         uses: ravsamhq/notify-slack-action@v1
         with:
+          notification_title: '{workflow} has {status_message}'
           status: ${{ job.status }}
           notify_when: 'success,failure,warnings'
           mention_users: 'benmiledaymen,Mosbeh Hichem '

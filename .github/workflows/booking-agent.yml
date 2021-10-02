@@ -61,7 +61,7 @@ jobs:
 
       - name: Notify Me
         if: always()
-        uses: rtCamp/action-slack-notify@v2
+        uses: ravsamhq/notify-slack-action@v1
         with:
           status: ${{ job.status }}
           notify_when: 'success,failure,warnings'

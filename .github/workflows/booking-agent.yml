@@ -72,8 +72,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
           
       - name: Send mail
-        # if: ${{ failure() }}
-        if: always()
+        if: ${{ failure() }}
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:

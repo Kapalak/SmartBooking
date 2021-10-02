@@ -43,7 +43,7 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/videos/booking-agent/       
+          path: cypress/videos/booking_agent/       
               
       - name: Upload screenshots test result
         uses: actions/upload-artifact@v1.0.0
@@ -51,7 +51,7 @@ jobs:
           # Artifact name
           name: test-result-video
           # Directory containing files to upload
-          path: cypress/screenshots/booking-agent/  
+          path: cypress/screenshots/booking_agent/  
       
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1

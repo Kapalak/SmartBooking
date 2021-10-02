@@ -11,7 +11,7 @@ on:
     branches: [ master ]
 
   schedule:
-    - cron:  	0/10 * * * *
+    - cron:  	0/5 * * * *
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -72,6 +72,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
           
       - name: Send mail
+        if: ${{ failure() }}
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:

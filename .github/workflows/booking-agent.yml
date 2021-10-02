@@ -65,8 +65,8 @@ jobs:
         with:
           status: ${{ job.status }}
           notify_when: 'success,failure,warnings'
-          mention_users: 'benmiledaymen'
-          mention_users_when: 'success,failure,warnings'
+          mention_users: 'benmiledaymen,Mosbeh Hichem '
+          mention_users_when: 'failure,warnings'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
             

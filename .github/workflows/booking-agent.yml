@@ -34,8 +34,7 @@ jobs:
       
       - name: Run Cypress Test
         run: |
-          npx cypress run --spec cypress/integration/booking_agent/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}
-        continue-on-error: true        
+          npx cypress run --spec cypress/integration/booking_agent/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}      
       
       - name: Upload video test result
         uses: actions/upload-artifact@v1.0.0
@@ -46,6 +45,7 @@ jobs:
           path: cypress/videos/booking_agent/       
               
       - name: Upload screenshots test result
+        if: always()
         uses: actions/upload-artifact@v1.0.0
         with:
           # Artifact name
@@ -54,6 +54,7 @@ jobs:
           path: cypress/screenshots/booking_agent/  
       
       - name: Publish Unit Test Results
+        if: always()
         uses: EnricoMi/publish-unit-test-result-action@v1
         with:
           check_name: Unit Test Results

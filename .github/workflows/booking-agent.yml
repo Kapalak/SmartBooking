@@ -37,6 +37,7 @@ jobs:
           npx cypress run --spec cypress/integration/booking_agent/*.spec.js --record --key ${{ secrets.CYPRESS_KEY }}      
       
       - name: Upload video test result
+        if: always()
         uses: actions/upload-artifact@v1.0.0
         with:
           # Artifact name
